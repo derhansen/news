@@ -445,7 +445,10 @@ detail.errorHandling
 
    redirectToPage
       Redirect to any page by using the syntax redirectToPage,<pageid>,<status>.
-      This means e.g. redirectToPage,123,404 to redirect to the page with UID 123 and error code 404.
+      This means e.g. redirectToPage,123,301 to redirect to the page with UID 123 and error code 301.
+
+      .. note::
+         It is only possible to use 30x error codes for the redirect. Returning a `404` error code will not work.
 
    pageNotFoundHandler
       The page not found handler defined in the site configuration is called.
